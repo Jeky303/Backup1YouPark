@@ -1,0 +1,101 @@
+/* DIV Buttoni servizi */
+
+/* Stile generale dei pulsanti */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Utilizza al massimo 200px per colonna, adattandosi al contenitore */
+    grid-gap: 20px;
+    /* Spazio tra i pulsanti */
+    justify-content: center;
+    /* Allinea i pulsanti al centro orizzontalmente */
+    padding: 0 20px;
+    /* Distanza dai lati sinistro e destro */
+    margin: 40px 0;
+    /* Margine superiore e inferiore */
+}
+
+.button-container button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--info);
+    border: none;
+    border-radius: 45px;
+    padding: 1.5em;
+    margin: 10px;
+    /* Aggiungi spazio tra i pulsanti */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-container button:hover {
+    background-color: #23d9e0;
+    transform: translateY(-3px);
+}
+
+.button-container button img {
+    max-width: 40px;
+    /* Larghezza massima per l'immagine */
+    margin-bottom: 5px;
+    /* Spazio tra l'immagine e il testo */
+}
+
+.button-container button span {
+    font-size: 18px;
+    /* Dimensione del testo */
+    color: #333;
+    /* Colore del testo */
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 300px;
+    /* Modifica la larghezza massima per adattarsi ai dispositivi più piccoli */
+    margin-bottom: 20px;
+    /* Aggiungi margine inferiore per separare i container */
+}
+
+.footer-icons {
+    font-size: 24px;
+}
+
+.icon {
+    text-decoration: none;
+    color: var(--light);
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+p {
+    margin-top: 10px;
+}

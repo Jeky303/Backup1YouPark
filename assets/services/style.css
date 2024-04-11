@@ -1,0 +1,125 @@
+/* Stili per la struttura delle righe */
+.top-row,
+.bottom-row {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Distribuisce uniformemente gli elementi sulla riga */
+}
+
+#abbonamento {
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* due colonne di larghezza uguale */
+    grid-template-rows: auto auto;
+    /* due righe con altezza automatica */
+    gap: 10px;
+    /* spazio tra le celle */
+}
+
+/* Stili per i figli diretti di #abbonamento */
+#abbonamento>div {
+    background-color: #f2f2f2;
+    /* sfondo grigio chiaro */
+    padding: 20px;
+    /* spazio interno */
+}
+
+/* Stili per gli elementi del servizio */
+.service-item {
+    width: calc(50% - 10px);
+    /* Calcola la larghezza degli elementi in base alla dimensione della riga */
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.service-item.active {
+    background-color: var(--info);
+}
+
+/* Media query per dispositivi con larghezza massima di 480px (telefono) */
+@media only screen and (max-width: 480px) {
+
+    .top-row,
+    .bottom-row {
+        flex-direction: column;
+        /* Cambia la disposizione degli elementi in colonne */
+    }
+
+    .service-item {
+        width: 100%;
+        /* La larghezza degli elementi sarà al 100% della riga */
+    }
+}
+
+.card {
+    border: 2px dashed var(--info);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+
+#formAbbonamento {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Stile per le etichette */
+#formAbbonamento label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Stile per gli input e le select */
+#formAbbonamento input[type="text"],
+#formAbbonamento input[type="date"],
+#formAbbonamento select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Stile per il checkbox */
+#formAbbonamento input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Stile per il pulsante di invio */
+#formAbbonamento input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Stile per il pulsante di invio al passaggio del mouse */
+#formAbbonamento input[type="submit"]:hover {
+    background-color: #0056b3;
+}
